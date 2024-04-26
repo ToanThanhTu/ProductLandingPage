@@ -1,0 +1,177 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth
+}
+
+html {
+  min-width: 300px;
+  background-color: #fefefe;
+  font-family: Courier New, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.3em;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  position: fixed;
+  top: 0;  
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+  background-color: #e1e5eb;
+}
+
+#logo-and-title {
+  display: flex;
+  align-items: center;
+}
+
+#header-img {
+  margin-right: 1em;
+  width: 50px;
+}
+
+nav ul {
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+  margin: 0 1.2em;
+  font-size: 1em;
+}
+
+main {
+  width: 70%;
+  max-width: 1000px;
+  min-width: 350px;
+  margin: 150px auto 50px;
+}
+
+form h2, form input {
+  display: block;
+  margin: 0 auto 0.5em;
+}
+
+form h2 {
+  text-align: center;
+}
+
+form input {
+  height: 2em;
+}
+
+#email {
+  width: 30%;
+  min-width: 150px;
+}
+
+#submit {
+  width: 20%;
+  min-width: 100px;
+}
+
+#features {
+  margin: 3em auto;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  margin: 1em 0;
+}
+
+.icon {
+  font-family: "Font Awesome 5 Free";
+  font-size: 3em;
+  margin-right: 0.5em;
+}
+
+.icon::before {
+  content: "\f06d";
+}
+
+#review {
+  display: flex;
+  justify-content: center;
+  margin: 3em auto;
+}
+
+#pricing {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.product {
+  border: 1px solid black;
+  text-align: center;
+  width: calc(100% / 3);
+  margin: 10px;
+  min-width: 200px;
+}
+
+.name {
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #e1e5eb;
+  padding: 10px 0;
+}
+
+button {
+  width: 50%;
+  height: 2em;
+  margin: 10px 0;
+}
+
+footer {
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  #pricing {
+    display: block;
+  }
+
+  .product {
+    margin: 10px auto;
+    width: 250px;
+  }
+  
+}
+
+@media (max-width: 700px) {  
+  header, nav ul {
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px;
+  }
+
+  #logo-and-title {
+    margin: 1em 0;
+  }
+
+  header {
+    height: 155px;
+  }
+
+  main {
+    margin-top: 160px;
+  }
+}
