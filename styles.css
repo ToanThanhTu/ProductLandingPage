@@ -1,10 +1,12 @@
+/* Reset styles for all elements */
 *, *::before, *::after {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth
+  box-sizing: border-box; /* Border and padding included in width and height */
+  scroll-behavior: smooth; /* Smooth scrolling behavior */
 }
 
+/* Styling for the html element */
 html {
   min-width: 300px;
   background-color: #fefefe;
@@ -12,20 +14,24 @@ html {
   line-height: 1.5;
 }
 
+/* Styling for h1 element */
 h1 {
   font-family: 'Anton', sans-serif;
   font-size: 1.3em;
 }
 
+/* Styling for heading elements h2 to h6 */
 h2, h3, h4, h5, h6 {
   font-family: 'Raleway', sans-serif;
 }
 
+/* Styling for anchor links */
 a {
   text-decoration: none;
   color: black;
 }
 
+/* Styling for header element */
 header {
   position: fixed;
   top: 0;  
@@ -37,88 +43,108 @@ header {
   background-color: #e1e5eb;
 }
 
+/* Styling for logo and title container */
 #logo-and-title {
-  display: flex;
+  display: flex; /* flex display to center elements */
   align-items: center;
 }
 
+/* Styling for header image */
 #header-img {
   margin-right: 1em;
   width: 50px;
 }
 
+/* Styling for navigation ul */
 nav ul {
   display: flex;
 }
 
+/* Styling for list items within navigation */
 ul li {
   list-style: none;
   margin: 0 1.2em;
   font-size: 1em;
 }
 
+/* Styling for main content area */
 main {
   width: 70%;
   max-width: 1000px;
   min-width: 350px;
-  margin: 150px auto 50px;
+  margin: 150px auto 50px; /* Top, bottom margin, auto left and right */
 }
 
+/* Styling for form's heading and inputs */
 form h2, form input {
   display: block;
   margin: 0 auto 0.5em;
 }
 
+/* Styling for form heading */
 form h2 {
   text-align: center;
 }
 
+/* Styling for form inputs */
 form input {
   height: 2em;
 }
 
+/* Styling for email input */
 #email {
   width: 30%;
   min-width: 150px;
 }
 
+/* Styling for submit input (button) */
 #submit {
   width: 20%;
   min-width: 100px;
 }
 
+/* Styling for submit input (button) on hover state */
+#submit:hover {
+  cursor: pointer;
+}
+
+/* Styling for features section */
 #features {
   margin: 3em auto;
 }
 
+/* Styling for each feature */
 .feature {
   display: flex;
   align-items: center;
+  justify-content: left;
   margin: 1em 0;
 }
 
+/* Styling for icons within features */
 .icon {
   font-family: "Font Awesome 5 Free";
   font-size: 3em;
-  margin-right: 0.5em;
+  margin-right: 1em;
+  width: 50px;
+  text-align: center;
 }
 
-.icon::before {
-  content: "\f06d";
-}
-
+/* Styling for review section */
 #review {
   display: flex;
   justify-content: center;
   margin: 3em auto;
 }
 
+/* Styling for pricing section */
 #pricing {
-  display: flex;
+  display: flex; /* Flex display to center elements */
   align-items: center;
   justify-content: space-evenly;
 }
 
+/* Styling for each product */
 .product {
   border: 1px solid black;
   text-align: center;
@@ -127,6 +153,7 @@ form input {
   min-width: 200px;
 }
 
+/* Styling for product name */
 .name {
   text-transform: uppercase;
   font-weight: bold;
@@ -134,21 +161,38 @@ form input {
   padding: 10px 0;
 }
 
+/* Styling for buttons within products */
 button {
   width: 50%;
   height: 2em;
   margin: 10px 0;
 }
 
-footer {
-  text-align: center;
+/* Styling for button on hover state */
+button:hover {
+  cursor: pointer;
 }
 
+/* Styling for footer section */
+footer {
+  text-align: center;
+  font-style: italic;
+  font-size: 14px;
+}
+
+/* Styling for links within footer */
+footer a {
+  color: blue;
+}
+
+/* Media query for screens up to 1000px */
 @media (max-width: 1000px) {
+  /* Adjusting pricing section for smaller screens */
   #pricing {
     display: block;
   }
 
+  /* Adjusting product layout for smaller screens */
   .product {
     margin: 10px auto;
     width: 250px;
@@ -156,21 +200,27 @@ footer {
   
 }
 
+/* Media query for screens up to 700px */
 @media (max-width: 700px) {  
+  /* Adjusting header and navigation for smaller screens */
+  /* Display header and navigation horizontally */
   header, nav ul {
-    flex-direction: column;
+    flex-direction: column; /* Flex direction to column */
     align-items: center;
     min-width: 300px;
   }
 
+  /* Adjusting logo and title margin for smaller screens */
   #logo-and-title {
     margin: 1em 0;
   }
 
+  /* Adjusting header height for smaller screens */
   header {
     height: 155px;
   }
 
+  /* Adjusting main content margin top for smaller screens */
   main {
     margin-top: 160px;
   }
